@@ -19,7 +19,7 @@ console.log(number1 % number2)
 username = "Deuty"
 
 console.log(username)
-*/
+
 let firstname;
 let lastname;
 
@@ -28,3 +28,14 @@ lastname = prompt("Quel est votre patronyme?");
 
 alert(`Bonjour ${firstname} ${lastname}, comment vas tu?`)
 
+*/
+
+function fisrtFunction() {
+    console.log("La fonction fonctionne")
+    alert('Danger')
+}
+
+fisrtFunction();
+fisrtFunction();
+fisrtFunction();
+fisrtFunction();

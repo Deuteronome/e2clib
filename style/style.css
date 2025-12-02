@@ -122,13 +122,12 @@ nav {
 
 main {
     position : relative;
-    top : 5vh;
+    top : 15vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items : center;
-    
-    
+    align-items : center;   
+    min-height: 80vh;
 }
 
 main>* {
@@ -234,4 +233,8 @@ footer {
 
 .site>p, h3 {
      margin-bottom: 5px;
+}
+
+.js-zone {
+    margin: 5px;
 }
