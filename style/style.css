@@ -243,6 +243,7 @@ footer {
 
 #connect-background {
     display : none;
+   
     justify-content: center;
     align-items: center;
 
@@ -257,7 +258,7 @@ footer {
     backdrop-filter: blur(4px);
     z-index: 20;
 
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 
 #connect-form {

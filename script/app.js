@@ -1,47 +1,19 @@
-//Définir les variable - récuperer les élements html dont on a besoin
-const connectButton = document.querySelector("#connect-button");
-const main = document.querySelector("main");
-const connectBox = document.querySelector("#connect-background");
-const closeButton = document.querySelector(".close-button");
-const formBox = document.querySelector("#connect-form");
-let count = 0;
+import { Connect } from "./connect.js";
+import { Setup } from "./setup.js";
+import { Game } from "./game.js";
 
+function main() {
+    const connect = new Connect();
+    const setup = new Setup();
+    switch (document.title) {
+        case "Game":
+            const game = new Game();
+            break;
+        default :
+            console.log("nothing special")
+        }
 
-//Définir les fonctions - les actions possibles
-function addText() {
-    count ++;
-    let newText = document.createElement("p")
-    newText.classList.add("js-zone");
-    
-    if(count%2==0){
-        newText.style.color = "red"
-    }
-
-    if(count <= 10) {
-        newText.innerHTML = `tentative N° ${count}`
-    } else {
-        newTxt.innerHTML = "C'est pas fini"
-        connectButton.removeEventListener("click", addText)
-    }
-    main.appendChild(newText)    
+    window.addEventListener('resize', setup.mainHeight)
 }
 
-function openConnect() {
-    connectBox.style.display = "flex"
-    connectBox.style.opacity = "1"
-}
-
-function closeConnect() {
-    connectBox.style.display = "none"
-    connectBox.style.opacity = "0"
-}
-
-function noClose(event) {
-    event.stopPropagation()
-}
-
-//mettre en place les déclencheurs - écouteur d'évenements</p>
-connectButton.addEventListener("click", openConnect)
-closeButton.addEventListener("click",closeConnect)
-connectBox.addEventListener("click",closeConnect)
-formBox.addEventListener("click", noClose)
+document.addEventListener("DOMContentLoaded", main)
