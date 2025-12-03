@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E2C Lib</title>
     <link rel="icon" href="../assets/icons/logoE2Clib.png">
-    <link rel="stylesheet" href="./style/style.css">    
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="module" src="./script/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
         <nav>
             <a class="btn btn-dark" href="#">Catalogue</a>
             <a class="btn btn-dark" href="./pages/game.htm">Détente</a>
-            <a class="btn btn-light" href="#">Connexion</a>
+            <a id="connect-button" class="btn btn-light" href="#">Connexion</a>
         </nav>
     </header>
 
@@ -89,5 +90,18 @@
             </div>
         </div>
     </footer>
+    <div id="connect-background">
+        <div id="connect-form">
+            <div class="close-button"></div>
+            <form action="#" method="post">
+                <label for="email">Votre email :</label>
+                <input type="email" name="email" id="email" placeholder="name@tonsite.esp" required>
+                <label for="password">mot de passe :</label>
+                <input type="password" name="password" id="password" placeholder="********" required>
+                <input type="submit" value="Let's Read!" class="btn btn-light">
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>

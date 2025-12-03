@@ -261,6 +261,7 @@ footer {
 }
 
 #connect-form {
+    position : relative;
     background-color: var(--col-dark-main);
     color : var(--col-light);
     padding: 20px;
@@ -307,21 +308,26 @@ footer {
 }
 
 .close-button {
-    position : absolute;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-    top : 26vh;
-    right: 20vw;
-
+    position : absolute;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    top : 4%;
+    right: 2%;
+    background-color: var(--col-light);
     width : 3%;
     aspect-ratio: 1;
-    background-color: var(--col-light);
     color : var(--col-dark-main);
     font-size: 2rem;
     text-align: center;
     font-weight: 900;
-    border-radius: 15%;
+    border-radius: 20%;
+    background-image: url(../assets/icons/croixFonce.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x:center ;
+    background-position-y:center ;
+    
 }
 
 .close-button:hover {
-    background-color: #ffffff00;
-    text-shadow: var(--col-light) 2px 2px 2px;
+    background-color: var(--col-dark-main);
+    background-image: url(../assets/icons/croixClaire.png);
 }

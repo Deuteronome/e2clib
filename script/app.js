@@ -2,7 +2,6 @@
 const connectButton = document.querySelector("#connect-button");
 const main = document.querySelector("main");
 const connectBox = document.querySelector("#connect-background");
-console.log(connectBox);
 const closeButton = document.querySelector(".close-button");
 const formBox = document.querySelector("#connect-form");
 let count = 0;
