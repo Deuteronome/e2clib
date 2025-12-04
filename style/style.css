@@ -332,3 +332,106 @@ footer {
     background-color: var(--col-dark-main);
     background-image: url(../assets/icons/croixClaire.png);
 }
+
+/*Espace de jeu - page game.htm */
+
+section {
+    width : 80%;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items : center;
+}
+
+section>* {
+    display : block;
+}
+
+#select-zone {
+    margin-top : 5vh;
+    margin-bottom: 2vh;    
+}
+
+#select-zone>* {
+    margin : 0 15px;
+    
+}
+
+#select-label {
+    font-size: 1.4rem;
+    text-align: end;
+}
+
+#select-field {
+    text-align: center;
+    font-size: 1.5rem;
+    width : 30%;
+    border-radius: 5px;
+    background-color: var(--col-light);
+    color:var(--col-dark-main);
+    padding:5px;
+}
+
+#select-field:focus {
+    background-color: var(--col-dark-main);
+    color:var(--col-light);
+    box-shadow: var(--col-shadow) 1px 1px 2px 0;
+}
+
+#game-zone {
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+.highlight {
+    background-color: var(--col-dark-alt);
+    border-radius: 20px;
+    box-shadow: var(--col-shadow) inset 1px 1px 2px;
+}
+
+.warning-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    aspect-ratio: 25/9;    
+}
+
+.starting-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding : 40px;
+}
+
+.warning-text {
+    font-size: 3rem;
+    text-shadow: var(--col-shadow) 1px 1px 2px;
+}
+
+.starting-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 55%;
+    font-size: 1.2rem;
+}
+
+.starting-text>h2 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.starting-image {
+    display: block;
+    width : 35%;
+    border-radius: 20px;
+}
