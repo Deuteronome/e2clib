@@ -7,8 +7,8 @@ export class TicTacDoe {
     restartZone;
     restartButton;
     gridZone;
-    scores = [];
-    firstPlayer = true;
+    scores;
+    firstPlayer;
 
     constructor() {
         this.gameZone = document.querySelector('#game-zone');
@@ -18,6 +18,7 @@ export class TicTacDoe {
 
     init() {
         this.scores=[];
+        this.firstPlayer=true;
         this.gameZone.innerHTML="";
         this.gameZone.setAttribute('class', 'tic-tac-doe');
 

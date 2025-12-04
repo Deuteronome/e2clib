@@ -38,8 +38,8 @@ export class Game {
         this.main.appendChild(this.gameZone);
 
         this.selectField.addEventListener('change', this.gameChoice.bind(this));
-        //this.startingPage();
-        const dev = new TicTacDoe();
+        this.startingPage();
+        //const dev = new TicTacDoe();
     }
 
     reset() {
