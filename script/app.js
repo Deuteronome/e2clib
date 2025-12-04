@@ -13,7 +13,7 @@ function main() {
             console.log("nothing special")
         }
 
-    window.addEventListener('resize', setup.mainHeight)
+    window.addEventListener('resize', setup.mainHeight.bind(setup))
 }
 
 document.addEventListener("DOMContentLoaded", main)

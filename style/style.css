@@ -258,7 +258,7 @@ footer {
     backdrop-filter: blur(4px);
     z-index: 20;
 
-    transition: opacity 0.5s;
+    transition: opacity 250ms;
 }
 
 #connect-form {
@@ -350,8 +350,8 @@ section>* {
 }
 
 #select-zone {
-    margin-top : 5vh;
-    margin-bottom: 2vh;    
+    margin-top : 3vh;
+    margin-bottom: 3vh;    
 }
 
 #select-zone>* {
@@ -434,4 +434,72 @@ section>* {
     display: block;
     width : 35%;
     border-radius: 20px;
+}
+
+/*Tic Tac Doe */
+
+.tic-tac-doe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+#info-zone {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 35px 15px;
+    width : 20%;
+
+}
+
+#player-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width : 100%;
+}
+
+#player-text{
+    font-size: 1.8rem;
+    padding: 20px 0;
+}
+
+#player-image {
+    width : 100%;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+#grid-zone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+
+    
+    width :50%;
+
+}
+
+.square {
+    width : 30%;
+    aspect-ratio: 1;
+    background-color: #ffffff;
+    margin: 2px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.active:hover {
+    background-color: var(--col-light);
 }

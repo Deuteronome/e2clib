@@ -3,12 +3,12 @@ export class Setup {
         this.header = document.querySelector("header");
         this.footer = document.querySelector("footer");
         this.main = document.querySelector("main")
-
+        
         this.mainHeight()
     }
 
     mainHeight() {
-        
+
         const headerHeigth = this.header.offsetHeight;
         const footerHeight = this.footer.offsetHeight;
         const totalHeight = window.innerHeight;

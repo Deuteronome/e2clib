@@ -1,3 +1,5 @@
+import { TicTacDoe } from "./ticTacDoe.js";
+
 export class Game {
 
     selectZone;
@@ -36,7 +38,8 @@ export class Game {
         this.main.appendChild(this.gameZone);
 
         this.selectField.addEventListener('change', this.gameChoice.bind(this));
-        this.startingPage();
+        //this.startingPage();
+        const dev = new TicTacDoe();
     }
 
     reset() {
@@ -47,14 +50,14 @@ export class Game {
     gameChoice() {
         this.reset()
         this.selectField.blur();
-        console.log(this.selectField.value);
         switch(this.selectField.value){
             case '0' :
-                console.log('check');
                 this.startingPage();
                 break;
+            case '1' :
+                const ticTacDoe = new TicTacDoe();
+                break;
             default:
-                console.log('omg');
                 this.notImplemented()
                 break;
         } 
