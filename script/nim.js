@@ -2,6 +2,9 @@ export class Nim {
 
     parameterZone;
     tokenZone;
+    validationZone;
+    inactiveButton;
+    validationButton;
     parameters = {
         "tokens":12,
         "pack":3,
@@ -22,7 +25,7 @@ export class Nim {
         this.parameterZone.setAttribute('id', 'parameter-zone');
         this.parameterZone.setAttribute('class', 'highlight');
 
-        //a voir plus tard
+       
 
         this.tokenZone = document.createElement('div');
         this.tokenZone.setAttribute('id', 'token-zone');
@@ -30,7 +33,7 @@ export class Nim {
         for(let i =0; i<this.parameters["tokens"]; i++) {
             
             const token = document.createElement('div');
-            token.setAttribute('class', 'token token-active');
+            token.setAttribute('class', 'token');
 
             this.tokenZone.appendChild(token);
         }
@@ -44,7 +47,20 @@ export class Nim {
             }
         }
         
-        //this.gameZone.appendChild(this.parameterZone);
+        this.validationZone = document.createElement('div');
+        this.validationZone.setAttribute('id', 'validation-zone');
+
+        this.inactiveButton=document.createElement('div');
+        this.inactiveButton.setAttribute('class', 'btn btn-inactive');
+        this.inactiveButton.innerHTML= "Prendre";
+
+        this.validationButton=document.createElement('div');
+        this.validationButton.setAttribute('class', 'btn btn-validation');
+        this.validationButton.innerHTML= "Prendre";
+
+        this.validationZone.appendChild(this.inactiveButton);
+        this.tokenZone.appendChild(this.validationZone);
+        this.gameZone.appendChild(this.parameterZone);
         this.gameZone.appendChild(this.tokenZone);
     }
 }

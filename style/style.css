@@ -545,3 +545,34 @@ section>* {
     width : 15%;
     aspect-ratio: 1;
 }
+
+#validation-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+    width: 100%;
+    padding: 15px 0;
+}
+
+.btn-inactive {
+    background-color: var(--col-dark-main);
+    color : var(--col-dark-alt);
+    cursor:not-allowed;
+}
+
+.btn-validation {
+    background-color: var(--col-light);
+    color : var(--col-dark-alt);
+    border : var(--col-dark-alt) solid 2px;
+    cursor:pointer;
+    transition: color 250ms, background-color 250ms;
+}
+
+.btn-validation:hover {
+    background-color: var(--col-dark-alt);
+    color : var(--col-light);
+    border : var(--col-light) solid 2px;
+    
+}
