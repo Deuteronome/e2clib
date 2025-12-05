@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-feature-settings: "kern" 1;
 
     /*mes couleurs*/
     --col-dark-main : #0b1622;
@@ -502,4 +503,45 @@ section>* {
 
 .active:hover {
     background-color: var(--col-light);
+}
+
+/* jeu de nim */
+
+.nim {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+#parameter-zone {
+
+}
+
+#token-zone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 20px;
+}
+
+.token {
+    width : 15%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-image: url("../assets/icons/jeton.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin : 10px 0;
+}
+
+.token-active:hover {
+    box-shadow: var(--col-shadow) 0 0 6px 2px;
+}
+
+.empty-slot {
+    width : 15%;
+    aspect-ratio: 1;
 }

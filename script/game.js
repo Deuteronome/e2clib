@@ -1,4 +1,5 @@
 import { TicTacDoe } from "./ticTacDoe.js";
+import { Nim } from "./nim.js";
 
 export class Game {
 
@@ -38,8 +39,8 @@ export class Game {
         this.main.appendChild(this.gameZone);
 
         this.selectField.addEventListener('change', this.gameChoice.bind(this));
-        this.startingPage();
-        //const dev = new TicTacDoe();
+        //this.startingPage();
+        const dev = new Nim();
     }
 
     reset() {
@@ -56,6 +57,9 @@ export class Game {
                 break;
             case '1' :
                 const ticTacDoe = new TicTacDoe();
+                break;
+            case '2' :
+                const nim = new Nim();
                 break;
             default:
                 this.notImplemented()
