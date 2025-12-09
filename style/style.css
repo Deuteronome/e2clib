@@ -515,8 +515,44 @@ section>* {
 }
 
 #parameter-zone {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+#parameter-board {
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    width : 75%;
+    padding : 15px;
+    border-right: var(--col-light) solid 1px;
+}
+
+#control-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width : 25%;
+}
+
+.param-box {
+    width : 30%;
+    font-size: 1.2rem;
+    margin : 5px 0;
+}
+
+#param-rule {
+    width : 95%;
+}
+
 
 #token-zone {
     display: flex;
@@ -528,6 +564,7 @@ section>* {
 }
 
 .token {
+    user-select: none;
     width : 15%;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -539,6 +576,10 @@ section>* {
 
 .token-active:hover {
     box-shadow: var(--col-shadow) 0 0 6px 2px;
+}
+
+.token-selected {
+    box-shadow: rgba(146, 218, 146, 0.743) 0 0 6px 2px;
 }
 
 .empty-slot {
@@ -558,8 +599,10 @@ section>* {
 
 .btn-inactive {
     background-color: var(--col-dark-main);
+    border : var(--col-dark-main) solid 2px;
     color : var(--col-dark-alt);
     cursor:not-allowed;
+    margin: 5px 0;
 }
 
 .btn-validation {
@@ -568,6 +611,7 @@ section>* {
     border : var(--col-dark-alt) solid 2px;
     cursor:pointer;
     transition: color 250ms, background-color 250ms;
+    margin: 5px 0;
 }
 
 .btn-validation:hover {
