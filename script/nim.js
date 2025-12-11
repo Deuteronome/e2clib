@@ -134,10 +134,61 @@ export class Nim {
         document.querySelectorAll('.token').forEach((elem)=>{elem.classList.add('token-active')});
     }
 
-    botTurn() {
-        console.log('bot turn');
-        this.turnCheck();
+    botValidation() {
+        document.querySelectorAll('.bot-selected').forEach((elem)=>{
+            elem.setAttribute('class', 'empty-slot');
+            this.gameState['tokens']--
+        })
+
+        if(this.gameState['tokens']==0) {
+            this.gameOver('bot');
+        } else {
+            this.turnCheck();
+        }
     }
+
+    botTurn() {
+        const remainingTokens = document.querySelectorAll('.token');
+        console.log(remainingTokens);
+        let toSelect = 0;
+        if(this.parameters['regular']) {
+            if (this.gameState['tokens']==1){
+                toSelect =1;
+            } else if((this.gameState['tokens']-1)%(this.parameters['pack']+1) == 0){
+                toSelect = Math.floor(Math.random()*this.parameters['pack']+1);
+            } else {
+                toSelect = (this.gameState['tokens']-1)%(this.parameters['pack']+1);
+            }
+            
+        } else {
+            //on verra plus tard
+        }
+
+        function botChoice(game) {
+            let index;
+            
+            
+            do {
+                index = Math.floor(Math.random()*remainingTokens.length);
+            } while(remainingTokens[index].classList.contains('bot-delected'))
+                
+            remainingTokens[index].classList.add('bot-selected');
+
+            setTimeout(()=>{
+                if(document.querySelectorAll('.bot-selected').length < toSelect) {
+                    botChoice(game);
+                } else {
+                    game.botValidation();
+                }
+            }, 1000)
+            
+            
+        }
+
+        botChoice(this)      
+    }
+
+    
 
     clickOnToken(token) {
         
