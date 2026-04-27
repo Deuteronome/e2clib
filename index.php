@@ -1,3 +1,8 @@
+<?php
+    session_start();
+  
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +22,17 @@
         <nav>
             <a class="btn btn-dark" href="#">Catalogue</a>
             <a class="btn btn-dark" href="./pages/game.htm">Détente</a>
-            <a id="connect-button" class="btn btn-light" href="#">Connexion</a>
+            <?php
+                if(!isset($_SESSION["userId"])){
+            ?>
+                <a id="connect-button" class="btn btn-light" href="#">Connexion</a>
+            <?php 
+                } else {
+                    ?>
+                        <p>Bonjour utilisateur connecté</p>
+                    <?php
+                }
+            ?>
         </nav>
     </header>
 
@@ -93,7 +108,7 @@
     <div id="connect-background">
         <div id="connect-form">
             <div class="close-button"></div>
-            <form action="#" method="post">
+            <form action="./controller/loginController.php" method="post">
                 <label for="email">Votre email :</label>
                 <input type="email" name="email" id="email" placeholder="name@tonsite.esp" required>
                 <label for="password">mot de passe :</label>
